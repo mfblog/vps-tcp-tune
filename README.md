@@ -1,10 +1,10 @@
-# BBR v3 优化脚本 - Ultimate Edition v5.4.4
+# BBR v3 优化脚本 - Ultimate Edition v5.4.5
 
 **XanMod 内核 + BBR v3 + 全方位 VPS 管理工具集**
 
 一键安装 XanMod 内核，启用 BBR v3 拥塞控制，集成 33 项实用功能，优化你的 VPS 服务器。
 
-> **版本**: v5.4.4 ✨ **改进**：菜单33「端口流量计费与到期管理」主列表新增「重置日」「备注」两列（响应 [issue #22](https://github.com/Eric86777/vps-tcp-tune/issues/22)）——设置了月重置日的端口显示"每月X日"、未设置显示"不重置"，备注为空显示"-"；同时修复永久端口的「到期日」列显示为空白的问题，现统一显示"永久"。
+> **版本**: v5.4.5 🔒 **安全加固**：菜单32-7「OpenAI Responses API 转换代理」新增访问密钥鉴权——部署时自动生成 48 位访问密钥，客户端需在请求头携带 `Authorization: Bearer <访问密钥>` 才能使用代理，防止代理被他人白嫖你的上游 API Key；**已部署旧实例默认不受影响但仍无鉴权，建议进「修改配置」一路回车并重启，即可自动补发访问密钥启用保护**。同时收紧了代理实例配置文件的权限，并加固了 Xray 安装过程的临时文件安全。
 
 ---
 
@@ -185,7 +185,7 @@ AI 代理工具箱包含：
 - **Sub2API 部署管理**：订阅链接转 API 工具
 - **Caddy 多域名反代**：HTTPS 反向代理，自动 SSL 证书
 - **🆕 Cloudflare Tunnel 管理**（v5.0.0 新增）：一键部署 + 12 项完整管理功能
-- **OpenAI Responses API 转换代理**：Chat Completions → Responses API 转换
+- **OpenAI Responses API 转换代理**：Chat Completions → Responses API 转换（v5.4.5 起自带访问密钥鉴权：部署时自动生成密钥并在结果页展示，客户端需以 `Authorization: Bearer <访问密钥>` 调用；查看密钥可进实例的「查看状态」，旧实例进「修改配置」重启后即启用鉴权）
 
 ---
 
